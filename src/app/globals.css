@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #050505;
+  --bg-elevated: #0d0d0d;
+  --bg-card: rgba(18, 10, 12, 0.72);
+  --text: #f5f0f2;
+  --text-muted: #b7a8ad;
+  --neon-pink: #ff2d6a;
+  --neon-hot: #ff004c;
+  --deep-red: #8b001f;
+  --wine: #3a0614;
+  --glow: rgba(255, 45, 106, 0.45);
+  --border: rgba(255, 45, 106, 0.28);
+  --grain-opacity: 0.07;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-card: var(--bg-card);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-neon: var(--neon-pink);
+  --color-hot: var(--neon-hot);
+  --color-deep-red: var(--deep-red);
+  --color-wine: var(--wine);
+  --color-glow: var(--glow);
+  --color-border: var(--border);
+  --font-display: var(--font-display);
+  --font-brush: var(--font-brush);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(255, 45, 106, 0.35);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.font-brush {
+  font-family: var(--font-brush), cursive;
+}
+
+.grain::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.neon-text {
+  text-shadow:
+    0 0 12px rgba(255, 45, 106, 0.65),
+    0 0 28px rgba(255, 0, 76, 0.35);
+}
+
+.neon-border {
+  border: 1px solid var(--border);
+  box-shadow:
+    0 0 0 1px rgba(255, 45, 106, 0.08),
+    0 0 24px rgba(255, 45, 106, 0.12);
+}
+
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+}
+
+.glow-btn {
+  background: linear-gradient(135deg, #ff2d6a 0%, #c40034 55%, #7a001c 100%);
+  box-shadow:
+    0 0 20px rgba(255, 45, 106, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.glow-btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 28px rgba(255, 45, 106, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  filter: brightness(1.05);
+}
+
+.section-pad {
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-inline: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #f5f0f2;
+  transition: background-color 9999s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px #14080c inset;
+}
+
+.field-input {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.85rem 1rem;
+  color: white;
+  outline: none;
+}
+
+.field-input:focus {
+  border-color: rgba(255, 45, 106, 0.7);
+  box-shadow: 0 0 0 3px rgba(255, 45, 106, 0.12);
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
 }
