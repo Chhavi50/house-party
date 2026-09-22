@@ -4,7 +4,6 @@ import { EventDetails } from "@/components/EventDetails";
 import { Included } from "@/components/Included";
 import { Experience } from "@/components/Experience";
 import { Gallery } from "@/components/Gallery";
-import { Artist } from "@/components/Artist";
 import { BookingSection } from "@/components/BookingSection";
 import { FAQ } from "@/components/FAQ";
 import { Contact } from "@/components/Contact";
@@ -21,7 +20,6 @@ export default function HomePage() {
         <Included />
         <Experience />
         <Gallery />
-        <Artist />
         <BookingSection />
         <FAQ />
         <Contact />

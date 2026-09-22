@@ -83,6 +83,10 @@ export function Hero() {
           <span className="text-white">
             {formatCurrency(eventConfig.price)} / PERSON
           </span>
+          <span className="text-neon">•</span>
+          <span className="rounded-full border border-neon/40 bg-neon/10 px-2.5 py-0.5 text-xs font-bold text-neon">
+            BYOB AVAILABLE
+          </span>
         </motion.div>
 
         <motion.div

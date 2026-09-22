@@ -1,33 +1,38 @@
 "use client";
 
-import { Cigarette, Gamepad2, Headphones, Martini, UtensilsCrossed } from "lucide-react";
+import { Cigarette, Gamepad2, Headphones, Martini, UtensilsCrossed, Wine } from "lucide-react";
 import { FadeIn, SectionHeading } from "@/components/ui/Motion";
 
 const items = [
   {
     icon: UtensilsCrossed,
     title: "UNLIMITED SNACKS",
-    desc: "Veg & Non-Veg",
+    desc: "Veg & Non-Veg Available",
   },
   {
     icon: Martini,
     title: "SOFT DRINKS",
-    desc: "Unlimited",
+    desc: "Unlimited pours & mixers",
   },
   {
     icon: Headphones,
-    title: "DJ MUSIC",
-    desc: "& Dance",
+    title: "DJ MUSIC & DANCE",
+    desc: "High energy all night",
   },
   {
     icon: Gamepad2,
     title: "GAMES",
-    desc: "All night energy",
+    desc: "All night party energy",
   },
   {
     icon: Cigarette,
     title: "UNLIMITED HOOKAH",
     desc: "Lounge vibes",
+  },
+  {
+    icon: Wine,
+    title: "BYOB AVAILABLE",
+    desc: "Bring your own booze",
   },
 ];
 
@@ -48,11 +53,7 @@ export function Included() {
           {items.map((item, index) => {
             const Icon = item.icon;
             return (
-              <FadeIn
-                key={item.title}
-                delay={index * 0.07}
-                className={index === items.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""}
-              >
+              <FadeIn key={item.title} delay={index * 0.07}>
                 <article className="group relative h-full overflow-hidden rounded-sm border border-border bg-gradient-to-br from-[#1a070d] via-[#0d0508] to-black p-7 transition duration-300 hover:border-neon/50">
                   <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-neon/10 blur-2xl transition group-hover:bg-neon/25" />
                   <div className="relative">

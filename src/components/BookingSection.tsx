@@ -6,11 +6,12 @@ import { formatCurrency } from "@/lib/utils";
 import { FadeIn, SectionHeading } from "@/components/ui/Motion";
 
 const perks = [
-  "Unlimited Snacks (Veg & Non-Veg)",
+  "Unlimited Snacks (Veg & Non-Veg Available)",
   "Unlimited Soft Drinks & Mixers",
   "DJ Music & Dance Floor",
   "Late-Night Party Games",
   "Unlimited Hookah Lounge",
+  "BYOB Available",
 ];
 
 export function BookingSection() {
@@ -46,7 +47,7 @@ export function BookingSection() {
                   {eventConfig.eventName.toUpperCase()}
                 </h3>
                 <p className="mt-1 text-sm text-muted">
-                  {eventConfig.location} · {eventConfig.date} {eventConfig.day} · {eventConfig.time}
+                  {eventConfig.location} ({eventConfig.locationNote}) · {eventConfig.day} · {eventConfig.time}
                 </p>
               </div>
 

@@ -22,14 +22,14 @@ const body = Outfit({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
-  title: "Our First House Party Chandigarh | ₹1999",
+  title: "Our First House Party Chandigarh | ₹2299",
   description:
-    "One night. Good people. DJ music, dance, games, unlimited snacks, soft drinks and hookah. Join Our First House Party in Chandigarh.",
+    "One night. Good people. DJ music, dance, games, unlimited snacks, soft drinks, hookah and BYOB available. Join Our First House Party in Chandigarh.",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Our First House Party Chandigarh | ₹1999",
+    title: "Our First House Party Chandigarh | ₹2299",
     description:
-      "One night. Good people. DJ music, dance, games, unlimited snacks, soft drinks and hookah. Join Our First House Party in Chandigarh.",
+      "One night. Good people. DJ music, dance, games, unlimited snacks, soft drinks, hookah and BYOB available. Join Our First House Party in Chandigarh.",
     url: siteUrl,
     siteName: eventConfig.eventName,
     locale: "en_IN",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our First House Party Chandigarh | ₹1999",
+    title: "Our First House Party Chandigarh | ₹2299",
     description:
-      "One night. Good people. DJ music, dance, games, unlimited snacks, soft drinks and hookah.",
+      "One night. Good people. DJ music, dance, games, unlimited snacks, soft drinks, hookah and BYOB available.",
   },
 };
 

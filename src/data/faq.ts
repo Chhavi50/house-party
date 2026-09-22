@@ -2,17 +2,17 @@ export const faqItems = [
   {
     question: "Where exactly is the party?",
     answer:
-      "The event is in Chandigarh. Exact location details will be shared after successful registration and payment verification.",
+      "The event is in Chandigarh. DM for exact address — full location details will be shared after registration.",
   },
   {
-    question: "What's included in ₹1999?",
+    question: "What's included in ₹2299?",
     answer:
-      "Unlimited snacks (veg & non-veg), unlimited soft drinks, DJ music & dance, games, and unlimited hookah.",
+      "Unlimited snacks (veg & non-veg available), soft drinks, DJ music & dance, party games, unlimited hookah, and BYOB is available.",
   },
   {
     question: "Is alcohol included?",
     answer:
-      "The listed inclusions are soft drinks, snacks, DJ, games, and hookah. Follow any updates shared by the organizers after registration.",
+      "The event is BYOB (Bring Your Own Booze)! Unlimited soft drinks and mixers are included with your pass.",
   },
   {
     question: "How do I pay?",

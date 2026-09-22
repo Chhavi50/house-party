@@ -45,7 +45,7 @@ const experiences = [
   },
   {
     title: "LATE NIGHT",
-    copy: "House party atmosphere from 7 PM onwards.",
+    copy: "House party atmosphere from 8 PM onwards.",
     image: "/gallery/party-01.png",
   },
 ];
